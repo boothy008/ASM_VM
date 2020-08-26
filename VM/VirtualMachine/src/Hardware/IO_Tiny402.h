@@ -1,4 +1,5 @@
 #pragma once
+#include <cstdint>
 
 constexpr uint16_t  PC_MIN = 0x0000;
 constexpr uint16_t  PC_MAX = 0x0FFF;

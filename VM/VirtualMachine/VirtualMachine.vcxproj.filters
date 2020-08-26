@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Hardware">
+      <UniqueIdentifier>{53C5482A-3F92-A335-68AB-91DD54D7D8C3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Hardware\Hardware.h">
+      <Filter>Hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hardware\IO_Tiny402.h">
+      <Filter>Hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hardware\LC_3.h">
+      <Filter>Hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Hardware\Tiny402.h">
+      <Filter>Hardware</Filter>
+    </ClInclude>
+    <ClInclude Include="Intel_Hex.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Hardware\LC_3.cpp">
+      <Filter>Hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Hardware\Tiny402.cpp">
+      <Filter>Hardware</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="Intel_Hex.cpp" />
+  </ItemGroup>
+</Project>
