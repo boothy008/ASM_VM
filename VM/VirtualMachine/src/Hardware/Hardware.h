@@ -12,7 +12,7 @@ protected:
 	uint8_t m_running;
 
 public:
-	virtual ~Hardware() = default;
+	virtual ~Hardware();
 
 	Hardware(size_t registerSize, size_t memorySize) : m_pRegisters(new uint8_t[registerSize]), m_pMemory(new uint8_t[memorySize]), m_running(1)
 	{}

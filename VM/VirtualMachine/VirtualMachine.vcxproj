@@ -141,6 +141,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Intel_Hex.h" />
+    <ClInclude Include="src\Bit_Math.h" />
     <ClInclude Include="src\Hardware\Hardware.h" />
     <ClInclude Include="src\Hardware\IO_Tiny402.h" />
     <ClInclude Include="src\Hardware\LC_3.h" />
@@ -148,9 +149,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Intel_Hex.cpp" />
+    <ClCompile Include="src\Hardware\Hardware.cpp" />
     <ClCompile Include="src\Hardware\LC_3.cpp" />
     <ClCompile Include="src\Hardware\Tiny402.cpp" />
     <ClCompile Include="src\main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -2,7 +2,7 @@
 #include "IO_Tiny402.h"
 #include "Hardware.h"
 
-class Tiny402 : public Hardware
+class Tiny402 final : public Hardware
 {
 	//Registers
 	enum
@@ -42,22 +42,25 @@ class Tiny402 : public Hardware
 		R_SIZE
 	};
 	
-	uint16_t m_PC;
+	uint16_t m_pc;
+
+	uint16_t* m_register_X = reinterpret_cast<uint16_t*>(m_pRegisters + R_R26);
+	uint16_t* m_register_Y = reinterpret_cast<uint16_t*>(m_pRegisters + R_R28);
+	uint16_t* m_register_Z = reinterpret_cast<uint16_t*>(m_pRegisters + R_R30);
 
 	//===============================
 	//Instructions
 	//==============================
 
-	
+	//Load indirect from data space to register
+	void ldd(const uint16_t* reg, uint16_t instr);
 	
 public:
 	
-	Tiny402() : Hardware(R_SIZE, MEMORY_SIZE),  m_PC(0)
+	Tiny402() : Hardware(R_SIZE, MEMORY_SIZE),  m_pc(0)
 	{}
 
-	~Tiny402() = default;
-
-	uint8_t read_instruction();
+	~Tiny402(); 
 	
 	//Loads program from Intel Hex file
 	//:			- Start

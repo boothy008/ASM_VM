@@ -19,6 +19,7 @@
       <Filter>Hardware</Filter>
     </ClInclude>
     <ClInclude Include="Intel_Hex.h" />
+    <ClInclude Include="src\Bit_Math.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Hardware\LC_3.cpp">
@@ -29,5 +30,9 @@
     </ClCompile>
     <ClCompile Include="src\main.cpp" />
     <ClCompile Include="Intel_Hex.cpp" />
+    <ClCompile Include="src\Hardware\Hardware.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>
